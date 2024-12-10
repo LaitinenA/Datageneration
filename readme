@@ -1,0 +1,13 @@
+Data generation notes:
+Python code and example data attached. I hope outlook doesn't try to remove anything.
+
+packages needed:
+import pandas as pd
+import random
+
+Here is one version of code for generating spreadsheets. It outputs 10 charging bays with cars displayed as "1" and trucks as "2" into an .xlsx file.
+
+In this version, a "first come, first serve" logic was implemented that allows vehicles to occupy the next available charging bay if the arrival bay was occupied. However, if all bays are occupied, vehicles are turned away.
+
+In the previous versions all decisions for car arrivals for each bay were made separately with separate rand numbers.
+This meant that if a charging bay was occupied, but the next one was free, the free bay was not considered by the arriving car.
